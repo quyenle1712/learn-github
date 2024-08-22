@@ -1,0 +1,35 @@
+<?php
+  $x = "Le Thi Quyen";
+  #1
+   echo "So  ki tu la: "  .strlen($x) ;
+  #2
+   echo "So tu la: "  .str_word_count($x);
+  #3 
+  echo "Dao nguoc thanh: "  .strrev($x);
+  #4
+  echo "Tim kien tu: " .strpos($x,"Quyen");
+  #5
+  echo "Thay the thanh: "  .str_replace("Thi", "Minh", $x);
+  #7
+  echo "Doi thanh chu hoa: "  .strtoupper("Thi");
+  #8 
+  echo "Doi thanh chu thuong: "  .strtolower("Thi");
+  #9
+  $y = "minh quyen";
+  echo "Doi thanh chuoi in hoa chu cai dau tien: "  .ucwords("$y");
+  #10
+  $z = "     aaaaaaaaaaaaaa     ";
+   echo "Sau khi bo khoang trang: "  .trim("$z");
+  #11 chua duoc
+  $a = "a minh quyen";
+   echo "Sau khi bo chu cai dau: "  .ltrim("$a");
+  #12
+  $a = "a minh quyen";
+   echo "Sau khi bo chu cai cuoi: "  .rtrim("$a");
+
+   
+  
+  
+  
+  
+?>
