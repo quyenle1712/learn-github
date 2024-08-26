@@ -26,6 +26,141 @@
   #12
   $a = "a minh quyen";
    echo "Sau khi bo chu cai cuoi: "  .rtrim("$a");
+?>
+
+   #13
+<?php
+// Chuỗi cần tách
+$string = "Hello, how are you today?";
+
+// Sử dụng hàm explode() để tách chuỗi
+$delimiter = " ";
+$array = explode($delimiter, $string);
+
+// In mảng kết quả
+print_r($array);
+?>
+  #14
+  <?php
+// Mảng cần nối thành chuỗi
+$a = ["Hello", "how", "are", "you", "today?"];
+
+// Sử dụng hàm implode() để nối các phần tử thành chuỗi
+$delimiter = " "; // Dấu phân cách giữa các phần tử trong chuỗi
+$string = implode($delimiter, $a);
+
+// In chuỗi kết quả
+echo $string;
+?>
+  #15
+  <?php
+// Chuỗi ban đầu
+$string = "Quyên";
+
+// Chuỗi cần thêm
+$padString = "Minh";
+
+// Sử dụng hàm str_pad() để thêm chuỗi vào đầu
+// Tổng độ dài mới là tổng chiều dài của $padString và $string
+$newString = str_pad($string, strlen($padString) + strlen($string), $padString, STR_PAD_LEFT);
+
+// In chuỗi kết quả
+echo $newString;
+?>
+  #16
+  <?php
+// Chuỗi cần kiểm tra
+$string = " Minh Quyên đâyy! ";
+
+// Chuỗi con cần kiểm tra xem có phải là phần cuối của chuỗi hay không
+$substring = "đâyy!";
+
+// Sử dụng strrchr() để lấy phần cuối cùng của chuỗi dựa trên ký tự đầu tiên của $substring
+$lastPart = strrchr($string, $substring[0]);
+
+// Kiểm tra xem phần lấy được có trùng với $substring không
+if ($lastPart === $substring) {
+    echo "Chuỗi '$string' kết thúc bằng '$substring'.";
+} else {
+    echo "Chuỗi '$string' không kết thúc bằng '$substring'.";
+}
+?>
+  #17
+  <?php
+// Chuỗi cần kiểm tra
+$s = "Hello, how are you today?";
+
+// Chuỗi con cần tìm
+$subs = "how";
+
+// Sử dụng hàm strstr() để kiểm tra xem chuỗi có chứa chuỗi con hay không
+if (strstr($s, $subs) !== false) {
+    echo "Chuỗi '$s' có chứa chuỗi con '$subs'.";
+} else {
+    echo "Chuỗi '$s' không chứa chuỗi con '$subs'.";
+}
+?>
+  #18
+  <?php
+// Chuỗi ban đầu
+$string = " Xin chao, toi la Minh Quyen";
+
+// Ký tự thay thế
+$replacement = "_";
+
+// Sử dụng hàm preg_replace() để thay thế tất cả các ký tự không phải là chữ cái hoặc số
+$newString = preg_replace("/[^a-zA-Z0-9]/", $replacement, $string);
+
+// In chuỗi kết quả
+echo $newString;
+?>
+  #19
+  <?php
+// Chuỗi cần kiểm tra
+$string = "12345";
+
+// Chuyển chuỗi thành số nguyên và kiểm tra
+if (ctype_digit($string) && is_int((int)$string)) {
+    echo "Chuỗi '$string' là một số nguyên.";
+} else {
+    echo "Chuỗi '$string' không phải là một số nguyên.";
+}
+?>
+  #20
+  <?php
+// Chuỗi cần kiểm tra
+$email = "minhquyen17122004@gmail.com";
+
+// Sử dụng filter_var() để kiểm tra xem chuỗi có phải là email hợp lệ hay không
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "Chuỗi '$email' là một email hợp lệ.";
+} else {
+    echo "Chuỗi '$email' không phải là một email hợp lệ.";
+}
+?>
+ #6
+<?php
+// Chuỗi cần kiểm tra
+$string = "Hello, world!";
+
+// Chuỗi con cần kiểm tra xem có phải là phần đầu của chuỗi hay không
+$substring = "Hello";
+
+// Sử dụng hàm strncmp() để kiểm tra
+if (strncmp($string, $substring, strlen($substring)) === 0) {
+    echo "Chuỗi '$string' bắt đầu bằng chuỗi con '$substring'.";
+} else {
+    echo "Chuỗi '$string' không bắt đầu bằng chuỗi con '$substring'.";
+}
+?>
+
+
+
+
+  
+
+
+
 
    
   
