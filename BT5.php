@@ -41,7 +41,7 @@ if ($rows) {
         echo 'Country: ' . htmlspecialchars($row['country']) . '<br><br>';
     }
 }
-
+ 
 mysqli_close($conn); // Đóng kết nối CSDL
 ?>
 </body>
